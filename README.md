@@ -125,4 +125,7 @@
 
 		sudo reboot now
 		```
-3. asds
+	- Herramientas adicionales
+		```sh
+		sudo pacman -S fastfetch btop htop yazi fzf
+		``` 
