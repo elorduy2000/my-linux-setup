@@ -1,5 +1,0 @@
-GRUB_TIMEOUT=0
-GRUB_DISABLE_SUBMENU=true
-GRUB_TERMINAL_OUTPUT="console"
-GRUB_DEFAULT=saved
-GRUB_BACKGROUND="~/Backgrounds/arch_linux_01.png" 

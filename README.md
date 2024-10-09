@@ -113,9 +113,11 @@
 		sudo micro `/etc/default/grub
 		
 		# Configurar los siguientes parametros
+		GRUB_DEFAULT=0
 		GRUB_TIMEOUT=0
-		GRUB_FORCE_HIDDEN_MENU="true"
-		GRUB_BACKGROUND="~/Backgrounds/arch_linux_01.png"
+		GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 splash"
+		GRUB_TIMEOUT_STYLE="hidden"
+		GRUB_BACKGROUND="/home/resilente/Backgrounds/arch_linux_01.png"
 
 		# Regenerar grub con los cambios
 		sudo grub-mkconfig -o /etc/default/grub
