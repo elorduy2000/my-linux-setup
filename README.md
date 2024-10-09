@@ -18,7 +18,7 @@
 			- English
 		- Mirrors
 			- No seleccionar nada para que el instalador decida
-				- Posteriormente, y de manera opcionar se puede instalar _reflector_ para forzar cual mirrors se van a usar
+usar
 		- Locales
 			- es
 		- Disk
@@ -28,7 +28,11 @@
 		- Bootloader
 			- Gub
 		- Profile
-			- Minimal
+			- Type
+				- Hyperland
+				- sddm
+				- AMD open source
+				- Polkitd
 		- Audio
 			- Pipewire
 		- Additional packages
@@ -82,12 +86,13 @@
 		- Referencias:
 			- https://starship.rs/guide/
 		```sh
-		sudo pacman -S lsd starship
+		sudo pacman -S tree lsd starship reflector
 		
 		micro .bashrc
 		# Configurar los siguientes parametros
 		alias ls="lsd -la"
 		alias tree="tree -C"
+		alias refresh-mirrors="sudo reflector --verbose --ipv4 --protocols https --download-timeout 5 --score 10 --sort rate --save /etc/pacman.d/mirrorlist"
 		# Agregar como ultima linea
 		eval "$(starship init bash)"
 		
