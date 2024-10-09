@@ -1,3 +1,4 @@
+
 # ::: ARCH LINUX + HYPRLAND :::
 ### Paso a paso para instalar, configurar y personalizar Arch Linux con Hyprland
 
@@ -48,7 +49,17 @@ usar
 		```
 		- Cuando la pantalla se coloque en negro, retirar la USB
 		- Esperar a que Arch Linux inicie y pida login
+	- Desinstalar sddm
+		- El servicio sddm solo se utilize para hacer una instalacion exitosa de Hyperland en Arch Linux, por lo tanto ahora podemos eliminarlo
+		- Cambiarse a modo consola <_ctrl + alt +f(n)_>
 		- Ingresar con el usuario definido en la instalacion
+		- Eliminar sddm
+			```sh
+			sudo systemctl stop sddm
+			sudo systemctl disable sddm
+			sudo pacman -Rs sddm
+			sudo reboot now
+			```
 2. #### Configuracion inicial
 	- Referencias
 		- https://wiki.archlinux.org/title/Pacman
@@ -132,5 +143,18 @@ usar
 		```
 	- Herramientas adicionales
 		```sh
-		sudo pacman -S fastfetch btop htop yazi fzf
+		sudo pacman -S fastfetch btop htop yazi fzf kitty
 		``` 
+3. #### Hyperland	
+	- Ingresar a Hyperland con el siguiente comando:
+		```sh
+		Hyprland
+		```
+	- TODO: configurar kitty
+		- https://wiki.archlinux.org/title/Kitty
+		- https://sw.kovidgoyal.net/kitty/kittens_intro/
+		- https://sw.kovidgoyal.net/kitty/kittens/choose-fonts/
+	- TODO: instalar y configurar firefox
+		- Tema oscuro
+			- GTK
+		- Dark reader
