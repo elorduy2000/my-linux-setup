@@ -177,6 +177,28 @@ usar
 
 			# Reiniciar Hyperland
 			```
+	- Configurar menu
+		- Referencias:
+			- https://wiki.archlinux.org/title/Rofi
+			- https://github.com/davatorium/rofi
+			- https://github.com/newmanls/rofi-themes-collection
+			- https://github.com/adi1090x/rofi
+		- Instalar y configurar rofi para reemplazar wofi
+			```sh
+			sudo pacman -S rofi
+
+			# Agregar otros temas
+			cd Downloads
+			git clone --depth=1 https://github.com/adi1090x/rofi.git
+			cd rofi
+			chmod +x setup.sh
+			./setup.sh
+			cd $HOME
+			
+			# Establece el tema type-2 style-1
+			micro .config/rofi/config.rasi
+			@theme "/home/resilente/.config/rofi/launchers/type-2/style-1.rasi"
+			```
 	- TODO: instalar y configurar firefox
 		- Tema oscuro
 			- GTK
