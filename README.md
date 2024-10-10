@@ -150,10 +150,33 @@ usar
 		```sh
 		Hyprland
 		```
-	- TODO: configurar kitty
-		- https://wiki.archlinux.org/title/Kitty
-		- https://sw.kovidgoyal.net/kitty/kittens_intro/
-		- https://sw.kovidgoyal.net/kitty/kittens/choose-fonts/
+	- Configurar kitty
+		- Referencias:
+			- https://wiki.archlinux.org/title/Kitty
+			- https://sw.kovidgoyal.net/kitty/kittens_intro/
+			- https://sw.kovidgoyal.net/kitty/kittens/choose-fonts/
+		- Copiar la configuracion de kitty
+			```sh
+			# Crear la carpeta de configuracion de kitty en caso que no exista
+			ls .config/kitty
+			mkdir .config/kitty
+
+			cp /Downloads/my-linux-setup/dotfiles/kitty.conf /.conf/kitty
+			```
+	- Establecer wallpaper
+		- Referencias:
+			- https://wiki.archlinux.org/title/Hyprland#Desktop_wallpaper
+			- https://hyprland.org/news/contestWinners/
+		-  Establecer el wallpaper en el arranque de Hyperland
+			```sh
+			micro .config/hypr/hyprland.conf
+			
+			# Agregar en la seccion AutoStart
+			exec-once = swww-daemon
+			exec-once = swww img /home/resilente/Backgrounds/hyprland_official_end_4.jpg
+
+			# Reiniciar Hyperland
+			```
 	- TODO: instalar y configurar firefox
 		- Tema oscuro
 			- GTK
