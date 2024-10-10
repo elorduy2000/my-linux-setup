@@ -173,7 +173,8 @@ usar
 			
 			# Agregar en la seccion AutoStart
 			exec-once = swww-daemon
-			exec-once = swww img /home/resilente/Backgrounds/hyprland_official_end_4.jpg --transition-type random
+			#exec-once = swww img /home/resilente/Backgrounds/hyprland_official_end_4.jpg --transition-type random
+			exec-once = swww img /home/resilente/Scripts/randomize-wallpaper.sh /home/resilente/Wallpapers
 
 			# Reiniciar Hyperland
 			```
