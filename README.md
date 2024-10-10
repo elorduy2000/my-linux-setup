@@ -1,4 +1,3 @@
-
 # ::: ARCH LINUX + HYPRLAND :::
 ### Paso a paso para instalar, configurar y personalizar Arch Linux con Hyprland
 
@@ -166,6 +165,7 @@ usar
 	- Establecer wallpaper
 		- Referencias:
 			- https://wiki.archlinux.org/title/Hyprland#Desktop_wallpaper
+			- https://github.com/LGFae/swww
 			- https://hyprland.org/news/contestWinners/
 		-  Establecer el wallpaper en el arranque de Hyperland
 			```sh
@@ -173,7 +173,7 @@ usar
 			
 			# Agregar en la seccion AutoStart
 			exec-once = swww-daemon
-			exec-once = swww img /home/resilente/Backgrounds/hyprland_official_end_4.jpg
+			exec-once = swww img /home/resilente/Backgrounds/hyprland_official_end_4.jpg --transition-type random
 
 			# Reiniciar Hyperland
 			```
