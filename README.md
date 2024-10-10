@@ -177,7 +177,7 @@ usar
 
 			# Reiniciar Hyperland
 			```
-	- Configurar menu
+	- Configurar launcher
 		- Referencias:
 			- https://wiki.archlinux.org/title/Rofi
 			- https://github.com/davatorium/rofi
@@ -186,6 +186,11 @@ usar
 		- Instalar y configurar rofi para reemplazar wofi
 			```sh
 			sudo pacman -S rofi
+
+			# Configurar rofi como menu de Hyperland
+			micro .config/hypr/hyprland.conf
+			# My Programs (comentar wofi)
+			$menu = rofi -show drun -show-icons						
 
 			# Agregar otros temas
 			cd Downloads
