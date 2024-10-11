@@ -169,14 +169,15 @@ usar
 			- https://hyprland.org/news/contestWinners/
 		-  Establecer el wallpaper en el arranque de Hyperland
 			```sh
-			micro .config/hypr/hyprland.conf
-			
+			micro .config/hypr/hyprland.conf			
 			# Agregar en la seccion AutoStart
 			exec-once = swww-daemon
-			#exec-once = swww img /home/resilente/Backgrounds/hyprland_official_end_4.jpg --transition-type random
-			exec-once = swww img /home/resilente/Scripts/randomize-wallpaper.sh /home/resilente/Wallpapers
+			exec-once = /home/resilente/Scripts/randomize-wallpaper.sh
 
-			# Reiniciar Hyperland
+			# Crea un comando simple (w) para randomizar el wallpaper desde la terminal
+			micro .bashrc
+			# Agrega el alias w
+			alias w='/home/resilente/Scripts/randomize-wallpaper.sh'
 			```
 	- Configurar launcher
 		- Referencias:
@@ -191,7 +192,7 @@ usar
 			# Configurar rofi como menu de Hyperland
 			micro .config/hypr/hyprland.conf
 			# My Programs (comentar wofi)
-			$menu = rofi -show drun -show-icons						
+			$menu = rofi -show drun -show-icons
 
 			# Agregar otros temas
 			cd Downloads
