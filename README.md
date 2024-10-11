@@ -213,12 +213,25 @@ usar
 		- Dark reader
 
 
-TODO: configurar ly dm
+TODO: configurar display manager
+
+LY
+	https://github.com/fairyglade/ly
 sudo pacman -S ly (en caso que no funcione instalandolo desde archinstall)
 	sudo systemctl enable ly
 micro /etc/ly/config.ini
-	matrix
-	fg=5
-	clock
-	numlock
+	animation = matrix
+	fg = 5
+	clock = %c
+	numlock = true
 
+SLICK
+	https://github.com/linuxmint/slick-greeter
+	https://wiki.archlinux.org/title/LightDM
+	https://linuxgenie.net/install-configure-lightdm-display-manager-arch-linux/
+	https://www.maketecheasier.com/customize-lightdm-themes/
+	https://github.com/topics/lightdm-theme
+	https://github.com/Xubuntu/lightdm-gtk-greeter-settings
+	https://terminalroot.com/customize-lightdm-on-arch-linux/
+	https://github.com/linuxmint/lightdm-settings
+sudo pacman -S lightdm-slick-greeter
