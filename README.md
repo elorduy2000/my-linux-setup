@@ -31,6 +31,7 @@ usar
 			- Type
 				- Hyperland
 				- sddm
+					intentar con ly sin desinstalarlo posteriormente
 				- AMD open source
 				- Polkitd
 		- Audio
@@ -172,7 +173,7 @@ usar
 			micro .config/hypr/hyprland.conf			
 			# Agregar en la seccion AutoStart
 			exec-once = swww-daemon
-			exec-once = /home/resilente/Scripts/randomize-wallpaper.sh
+			exec-once = swww img /home/resilente/Wallpapers/00_current.jpg
 
 			# Crea un comando simple (w) para randomizar el wallpaper desde la terminal
 			micro .bashrc
@@ -210,3 +211,14 @@ usar
 		- Tema oscuro
 			- GTK
 		- Dark reader
+
+
+TODO: configurar ly dm
+sudo pacman -S ly (en caso que no funcione instalandolo desde archinstall)
+	sudo systemctl enable ly
+micro /etc/ly/config.ini
+	matrix
+	fg=5
+	clock
+	numlock
+
