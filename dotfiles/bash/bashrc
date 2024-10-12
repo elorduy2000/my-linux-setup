@@ -4,6 +4,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+alias l='lsd -l'
+alias ll='lsd -la'
 alias ls='lsd -la'
 alias grep='grep --color=auto'
 alias tree='tree -C'
