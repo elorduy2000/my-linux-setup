@@ -1,0 +1,16 @@
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='lsd -la'
+alias grep='grep --color=auto'
+alias tree='tree -C'
+alias refresh-mirrors='sudo reflector --verbose --ipv4 --protocols https --download-timeout 5 --score 10 --sort rate --save /etc/pacman.d/mirrorlist'
+alias cdhome='cd $HOME'
+alias w='$HOME/Scripts/randomize-wallpaper.sh'
+
+PS1='[\u@\h \W]\$ '
+
+eval "$(starship init bash)"
