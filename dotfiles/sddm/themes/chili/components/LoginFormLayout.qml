@@ -90,8 +90,7 @@ Item {
         RowLayout {
             id: actionItemsLayout
 
-            /* Layout.alignment: Qt.AlignHCenter */
-            Layout.alignment: Qt.AlignLeft
+            Layout.alignment: Qt.AlignHCenter
             Layout.bottomMargin: actionItemsLayout.height * 4
 
             spacing: usernameFontSize * 2
