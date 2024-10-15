@@ -165,11 +165,12 @@ usar
 			```
 	- Establecer wallpaper
 		- Referencias:
+			- https://builtin.com/articles/error-externally-managed-environment
 			- https://wiki.archlinux.org/title/Hyprland#Desktop_wallpaper
 			- https://github.com/LGFae/swww
-			- https://hyprland.org/news/contestWinners/
+			- https://hyprland.org/news/contestWinners/			
 		-  Establecer el wallpaper en el arranque de Hyperland
-			```sh
+			```sh		
 			micro .config/hypr/hyprland.conf			
 			# Agregar en la seccion AutoStart
 			exec-once = swww-daemon
@@ -179,6 +180,14 @@ usar
 			micro .bashrc
 			# Agrega el alias w
 			alias w='/home/resilente/Scripts/randomize-wallpaper.sh'
+
+			# Instalar python
+			sudo pacman -S python
+			
+			# Instalar pywal 16 colors
+			python3 -m venv ~/py_envs
+			source ~/py_envs/bin/activate
+			python3 -m pip install .			
 			```
 	- Configurar launcher
 		- Referencias:
