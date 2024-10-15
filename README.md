@@ -207,6 +207,35 @@ usar
 			micro .config/rofi/config.rasi
 			@theme "/home/resilente/.config/rofi/launchers/type-2/style-1.rasi"
 			```
+	- Configurar barra de estado
+		- Referencias:
+			https://github.com/Alexays/Waybar/wiki/Module:-Custom
+		```sh
+		# Instalar waybar
+		sudo pacman -S waybar
+
+		# Agregar usuario a grupo "input" para tener acceso al estado del teclado
+		sudo usermod -aG input resilente
+		# Hacer logout y login para que se reflejen los cambios		
+		```
+			
+	- Configurar logout
+		- Referencias:
+			https://github.com/ArtsyMacaw/wlogout
+			https://github.com/ArtsyMacaw/wlogout/blob/master/layout
+			https://www.lorenzobettini.it/2024/02/hyprland-and-wlogout/
+			https://github.com/mylinuxforwork/dotfiles/tree/main/share/dotfiles/.config/wlogout
+		- Instalacion manual de wlogout
+			```sh
+			# Descargar, compilar e instalar wlogout
+			cd Downloads
+			git clone https://github.com/ArtsyMacaw/wlogout.git
+			cd wlogout
+			meson build
+			ninja -C build
+			sudo ninja -C build install
+			```		
+
 	- TODO: instalar y configurar firefox
 		- Tema oscuro
 			- GTK
@@ -235,3 +264,6 @@ SLICK
 	https://terminalroot.com/customize-lightdm-on-arch-linux/
 	https://github.com/linuxmint/lightdm-settings
 sudo pacman -S lightdm-slick-greeter
+
+
+

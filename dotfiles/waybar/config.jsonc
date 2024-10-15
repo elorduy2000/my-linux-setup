@@ -1,0 +1,96 @@
+{
+	// General
+	
+    "position": "top",
+    "height": 50, // Waybar height (to be removed for auto height)
+    "spacing": 4, // Gaps between modules (4px)
+
+    // Modules layout
+    
+    "modules-left": [
+    	"clock",
+    ],
+    "modules-center": [
+    	"hyprland/workspaces",
+        "hyprland/window"
+    ],
+    "modules-right": [
+        "cpu",
+        "memory",
+        "temperature",
+        "pulseaudio",
+        "keyboard-state",
+        "network",
+        
+         "custom/power"
+    ],
+    
+    // Modules (left)
+
+    "clock": {
+        "format": "{:%B %d, %A, %H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+	// Modules (right)
+
+    "cpu": {
+        "format": "  {usage}%",
+        "tooltip": true
+    },
+
+    "memory": {
+        "format": "  {}%",
+        "tooltip-format": "RAM {used:0.1f}GiB / {total:0.1f}GiB"
+    },
+
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", ""]
+    },
+
+    "pulseaudio": {
+        "format": "{volume}% {icon} {format_source}",
+        "format-source": "\t",
+        "format-source-muted": "\t",
+        "format-bluetooth": "\t{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": "\t {icon} {format_source}",
+        "format-muted": "\t {format_source}",
+        "format-icons": {
+            "headphone": "\t",
+            "hands-free": "\t",
+            "headset": "\t",
+            "phone": "\t",
+            "portable": "\t",
+            "car": "\t",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+
+	"custom/power": {
+	    "format": " ⏻ ",
+	    "tooltip": false,
+	    "on-click": "wlogout --protocol layer-shell"
+	}
+}
