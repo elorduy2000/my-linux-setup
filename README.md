@@ -181,13 +181,15 @@ usar
 			# Agrega el alias w
 			alias w='/home/resilente/Scripts/randomize-wallpaper.sh'
 
-			# Instalar python
-			sudo pacman -S python
+			# Instalar paru
+			sudo pacman -S --needed base-devel
+			git clone https://aur.archlinux.org/paru.git
+			cd paru
+			makepkg -si
+			paru -Syu
 			
 			# Instalar pywal 16 colors
-			python3 -m venv ~/py_envs
-			source ~/py_envs/bin/activate
-			python3 -m pip install .			
+			paru -S python-pywal16
 			```
 	- Configurar launcher
 		- Referencias:
