@@ -130,7 +130,7 @@
              "car": "\t",
              "default": ["", "", ""]
          },
-         "on-click": "pavucontrol"
+		"tooltip": false,
      },
 
     "custom/power": {
