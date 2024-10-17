@@ -276,9 +276,9 @@
 },
 
 "hyprland/window": {
-	//"format": "{title}",
-    //"max-length": 20,
-    "format": "",
+	"format": "{title}",
+    "max-length": 0,
+    //"format": "",
 	"icon": true,    
 },
   
