@@ -117,7 +117,7 @@ Rectangle {
                 lastUserName: userModel.lastUser
                 usernameFontSize: root.generalFontSize
                 usernameFontColor: root.generalFontColor
-                faceSize: config.AvatarPixelSize ? config.AvatarPixelSize : root.width / 15
+                faceSize: -600
 
                 showUserList: {
                     if ( !userListModel.hasOwnProperty("count") || !userListModel.hasOwnProperty("disableAvatarsThreshold") )

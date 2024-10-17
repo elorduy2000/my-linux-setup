@@ -5,9 +5,10 @@
 [[ $- != *i* ]] && return
 
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
-alias l='lsd -l'
-alias ll='lsd -la'
-alias ls='lsd -la'
+alias f='fc-list | fzf'
+alias l='eza -lh'
+alias ll='eza -lah'
+alias ls='eza -lah'
 alias grep='grep --color=auto'
 alias tree='tree -C'
 alias refresh-mirrors='sudo reflector --verbose --ipv4 --protocols https --download-timeout 5 --score 10 --sort rate --save /etc/pacman.d/mirrorlist'
