@@ -29,6 +29,7 @@
 		"custom/separator#blank_2", 
 		"hyprland/workspaces#pacman",
 		"custom/separator#blank_2",
+		"hyprland/window",
 	],
 	
 	"modules-right": [

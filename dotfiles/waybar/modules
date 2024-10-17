@@ -274,19 +274,12 @@
     "format": "<span style=\"italic\">  {}</span>", // Icon: expand-arrows-alt
     "tooltip": false,
 },
-    
+
 "hyprland/window": {
-    "format": "{}",
-    "max-length": 40,
-    "separate-outputs": true,
-    "offscreen-css" : true,
-    "offscreen-css-text": "(inactive)",
-     "rewrite": {
-          "(.*) — Mozilla Firefox": " $1",
-          "(.*) - fish": "> [$1]",
-      "(.*) - zsh": "> [$1]",
-      "(.*) - kitty": "> [$1]",
-    },
+	//"format": "{title}",
+    //"max-length": 20,
+    "format": "",
+	"icon": true,    
 },
   
 "idle_inhibitor": {
@@ -465,7 +458,8 @@
 },
       
 "custom/menu": {
-    "format": "{}",
+    //"format": "{}",
+    "format": "{}",
     "exec": "echo ; echo 󱓟 app launcher",
     "interval" : 86400, // once every day
     "tooltip": true,
