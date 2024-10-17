@@ -277,4 +277,13 @@ SLICK
 sudo pacman -S lightdm-slick-greeter
 
 
+SDDM
+	Copiar la carpeta
+		Downloads/my-linux-setup/dotfiles/sddm/themes/chili/
+	en
+		/usr/share/sddm/themes/
 
+	Copiar el archivo
+		Downloads/my-linux-setup/dotfiles/sddm/default.conf
+	en
+		/usr/lib/sddm/sddm.conf.d/default.conf
